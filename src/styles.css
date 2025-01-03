@@ -1,0 +1,582 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    --color-bg: #0e141b;
+    --color-bg-offset: #252526;
+    --color-text: #ffffff;
+    --color-text-offset: rgba(255, 255, 255, 0.85);
+    --color-border: #2d2d2d;
+    --color-primary: #ff5277;
+    --color-primary-offset: #ff2957;
+    --color-secondary: #43a9a3; 
+    --color-secondary-offset: #42ddd2; 
+    --color-murray: #861657;
+    --color-ghost: #F0EFF4;
+    --color-blue: #3066BE;
+    --color-text-ivory: #F9F9ED;
+    font-family: "Roboto", serif;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-blue);
+    box-shadow: 0px 5px 10px var(--color-blue);
+    color: var(--color-text);
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
+}
+
+/* Hace que al dar click en un botón referencia al mismo documento, tenga un scroll definido */
+:target {
+    scroll-margin-top: 120px;
+}
+
+.photoSection{
+    display: flex;
+    align-items: center;
+}
+
+.imageContainer{
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.sections ul{
+    list-style: none;
+    display: block;
+}
+
+.sections li{
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    color: var(--color-text-offset);
+}
+
+.sections li::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-text-offset);
+    transition: width 0.3s ease-in-out;
+}
+
+.sections li:hover{
+    color: white;
+    transition: color 0.5s;
+    background-color: #21519f;
+    border-radius: 5px;
+}
+
+.sections li:hover::before{
+    width: 100%;
+}
+
+.sections .nav{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sections .nav:visited,
+.sections .nav:active{
+    color: inherit;
+}
+
+/* Menú hamburguesa y aside*/
+.burguer{
+    display: none;
+}
+
+.burguer .burguer-menu{
+    font-size: clamp(2rem, 10vw, 3rem);
+    cursor: pointer;
+    color: var(--color-text-offset);
+    transition: color 0.3s ease;
+}
+
+.burguer .burguer-menu:hover{
+    cursor: pointer;
+    color: white;
+}
+
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.aside-body{
+    position:absolute;
+    height: 100%;
+    width: 200px;
+    background-color: white;
+    animation: appear 0.3s ease-in-out;
+}
+
+@keyframes appear{
+    from{
+        right: -200px;
+    }
+    to{
+        right: 0px;
+    }
+}
+
+.aside-list{
+    margin: 0px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.aside-list li{
+    font-size: 1.1rem;
+    padding: 5px 20px;
+}
+
+.aside-list li:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.aside-list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.close-menu{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-menu .icon{
+    font-size: 1.7rem;
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Cuerpo principal */
+main{
+    margin: 160px 50px 50px 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.banner{
+    height: clamp(350px, 50vw, 600px);
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.banner img{
+    position: absolute;
+    filter: brightness(50%);
+    width: 100%;
+    min-width: 600px;
+}
+
+.bannerText{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.bannerText .hello{
+    display: block;
+    font-size: clamp(1.5rem, 10vw, 5rem);
+    font-weight: bold;
+}
+
+.bannerText .presentation{
+    display: block;
+    margin-top: 20px;
+    font-size: clamp(1rem, 8vw, 3rem);
+}
+
+.personalInfo{
+    margin-top: clamp(30px, 10vw, 100px);
+    padding: 10px;
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    text-align: justify;   
+}
+
+.personalInfo .main{
+    display: grid;
+    grid-template-areas:
+    "text    img";
+}
+
+.personalInfo b{
+    color: var(--color-primary);
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.personalInfo .text{
+    grid-area: text;
+    padding-right: 30px;
+}
+
+.personalInfo .text span{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.personalInfo .text .name{
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: var(--color-primary);
+    font-weight: bold;
+    text-align: left;
+}
+
+.personalInfo .studies{
+    margin-top: 20px;
+}
+
+.personalInfo .certifications{
+    margin-top: 20px;
+}
+
+.personalInfo .img{
+    grid-area: img;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-blue);
+}
+
+.knowledge{
+    margin-top: clamp(30px, 10vw, 100px);
+    padding: clamp(10px, 5vw, 50px) 20px;
+    border-radius: 20px;
+    background-color: var(--color-ghost);
+    font-weight: bold;
+}
+
+.knowledge > b{
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    display: block;
+    margin-bottom: 30px;
+}
+
+.knowledge ul{
+    list-style: none;
+    display: grid;
+    column-gap: clamp(10px, 3vw, 50px);
+    row-gap: clamp(30px, 3vw, 50px);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+}
+
+.knowledge li{
+    height: 125px;
+    width: clamp(50px, 5vw, 120px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.knowledge li .tec{
+    font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.knowledge img{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.knowledge li .levelContainer{
+    position: absolute;
+    top: 90px;
+    width: 100px;
+    height: clamp(90px, 20vw, 120px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: top 0.2s ease-in, opacity 0.3s ease-in;
+}
+
+.knowledge li:hover .levelContainer{
+    opacity: 1;
+    top: 30px
+}
+
+.exp{
+    margin-top: clamp(30px, 10vw, 100px);
+    padding: 20px;
+}
+
+.exp > b{
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: var(--color-primary);
+}
+
+.exp .cardsBlock{
+    margin-top: 50px;
+}
+
+.cardsBlock .project{
+    margin-top: 50px;
+    display: flex;
+    color: var(--color-text-ivory);
+}
+
+.project .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.info .projectName b{
+    position: relative;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+    color: var(--color-secondary);
+    transition-duration: 0.3s;
+    transition-property: color;
+    cursor: pointer;
+}
+
+.projectName b::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projectName b:hover{
+    color: var(--color-secondary-offset);
+}
+
+.projectName b:hover::before{
+    transform: scale(1);
+    background-color: var(--color-secondary-offset);
+}
+
+.projectName{
+    color: inherit;
+    text-decoration: none;
+}
+
+.projectName:visited,
+.projectName:active{
+    color: inherit;
+}
+
+.info p{
+    margin-top: 20px;
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
+    text-align: justify;
+}
+
+.description a{
+    position: relative;
+}
+
+.description a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.description a:visited,
+.description a:active{
+    color: inherit;
+}
+
+.description b{
+    font-size: inherit;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.description b:hover{
+    color: var(--color-primary-offset);
+    text-decoration: underline;
+}
+
+.contact{
+    margin-top: clamp(30px, 5vw, 100px);
+    padding: 20px;
+}
+
+.contact > b{
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    color:  var(--color-primary);
+}
+
+.contact .mediums{
+    margin-top: clamp(10px, 5vw, 50px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.mediums .medium{
+    display: flex;
+    align-items: center;
+    font-size: clamp(1rem, 3vw, 1.7rem);
+    color: var(--color-secondary);
+}
+
+.medium .icon{
+    margin-right: 10px;
+}
+
+.medium span{
+    color: white;
+}
+
+.social{
+    margin-top: clamp(30px, 5vw, 100px);
+    padding: 20px;
+    background-color: var(--color-blue);
+    color: var(--color-text-ivory);
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    text-align: center;
+}
+
+.social a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: clamp(0.7rem, 3vw, 1.5rem);
+}
+
+.social a:hover, 
+.social a:visited, 
+.social a:active {
+    color: inherit;
+}
+
+.social .net{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.social .net .icon{
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
+@media screen and (max-width: 1510px){
+    .cardsBlock .project{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .project .info{
+        margin: 0px;
+    }
+
+    .carousel{
+        margin-top: clamp(20px, 10vw, 30px);
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .sections{
+        display: none;
+    }
+
+    .burguer{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .contact .mediums{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    main{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .personalInfo .main{
+        display: block;
+    }
+    
+    .personalInfo .text{
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .knowledge ul{
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    }
+    
+    .knowledge li{
+        height: 100px;
+    }
+    
+    .knowledge img{
+        width: clamp(50px, 30vw, 75px);
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    .mediums .medium{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .social .net{
+        flex-direction: column;
+    }
+
+    .net a{
+        margin-top: 20px;
+    }
+}

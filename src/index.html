@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=head, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="carousel.css">
+    <!-- Functions -->
+    <script src="./src.js" type="text/javascript"></script>
+    <!-- Ionic Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="photoSection">
+            <div class="imageContainer">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT8s8Cb6K2gAXM16KZ-n7qOaUzC_zihGWCoqdSS546NW0eE_xL-GhYDx9DTQ1BheS4T30&usqp=CAU" alt="image" height="70px">
+            </div>
+            <span><b>Portafolio Juanes</b></span>
+        </div>
+        <div class="sections">
+            <ul>
+                <li>
+                    <a class="nav" href="#banner">Inicio</a>
+                </li>
+                <li>
+                    <a class="nav" href="#personalInfo">Acerca de Mí</a>
+                </li>
+                <li>
+                    <a class="nav" href="#knowledge">Conocimientos</a>
+                </li>
+                <li>
+                    <a class="nav" href="#exp">Experiencia</a>
+                </li>
+                <li>
+                    <a class="nav" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <div class="burguer">
+            <label class="burguer-menu" for="burguer-menu">
+                <ion-icon class="icon" name="menu-outline"></ion-icon>
+            </label>
+            <input style="display: none;" class="check" type="checkbox" name="" id="burguer-menu">
+            <aside>
+                <div class="aside-left">
+                </div>
+                <div class="aside-body">
+                    <label class="close-menu" id="close-menu">
+                        <ion-icon class="icon" name="close-outline"></ion-icon>
+                    </label>
+                    <ul class="aside-list">
+                        <li>
+                            <a id="side" class="nav" href="#banner">Inicio</a>
+                        </li>
+                        <li>
+                            <a id="side" class="nav" href="#personalInfo">Acerca de Mí</a>
+                        </li>
+                        <li>
+                            <a id="side" class="nav" href="#knowledge">Conocimientos</a>
+                        </li>
+                        <li>
+                            <a id="side" class="nav" href="#exp">Experiencia</a>
+                        </li>
+                        <li>
+                            <a id="side" class="nav" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </header>
+    <main>
+        <div id="banner" class="banner">
+            <img src="https://olarez.com/wp-content/uploads/2023/01/estudiar-ingenieria-software.jpg" alt="bannerImg">
+            <div class="bannerText">
+                <span class="hello">¡HOLA MUNDO!</span>
+                <span class="presentation">Un desarrollador listo para conquistar el mundo digital</span>
+            </div>
+        </div>
+        <div id="personalInfo" class="personalInfo">
+            <div class="main">
+                <div class="text">
+                    <span class="name">Juan Esteban Espín.</span>
+                    <span>Soy un <b>ingeniero de software</b> con un amplio abánico de conocimientos en constante actualización.</span>
+                    <span>Disfruto aprender nuevas habilidades en cualquier campo, de la forma más eficiente posible.</span>
+                    <span>Me gusta el trabajo en equipo. Creo que la clave de la sinergia grupal está en encontrar las habilidades de cada uno de los miembros y explotarlas al máximo.</span>
+                    <span>Aspiro conseguir un puesto que me permita explotar mis habilidades técnicas y blandas, donde los productos sean agradables al público y reconocidos por su buen funcionamiento.</span>
+                </div>
+                <div class="img">
+                    <img src="https://www.shutterstock.com/image-photo/software-developer-programmer-coding-program-260nw-2337802721.jpg" alt="">
+                </div>
+            </div>
+            <div class="studies">
+                <span><b>Estudios:</b></span>
+                <ul>
+                    <li>Ingeniería de Software</li>
+                    <li>Certificación C1- en el idioma Inglés</li>
+                </ul>
+            </div>
+            <div class="certifications">
+                <span><b>Certificaciones:</b></span>
+                <ul>
+                    <li>JavaScript Escentials | CISCO</li>
+                    <li>HTML Introduction | GOOGLE</li>
+                </ul>
+            </div>
+        </div>
+        <div id="knowledge" class="knowledge">
+            <b>Conocimientos</b>
+            <ul>
+                <li>
+                    <span class="tec">Java</span>
+                    <img class="tecIcon" width="100px" src="https://static.vecteezy.com/system/resources/thumbnails/048/332/150/small/java-programming-language-java-logo-free-png.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Avanzado</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">JavaScript</span>
+                    <img class="tecIcon" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Avanzado</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">HTML</span>
+                    <img class="tecIcon" width="100px" src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-html-5-icon.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Medio - Alto</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">CSS</span>
+                    <img class="tecIcon" width="100px" src="https://icons.veryicon.com/png/o/application/skills-section/css3-5.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Avanzado</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">PHP</span>
+                    <img class="tecIcon" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">MySQL</span>
+                    <img class="tecIcon" width="100px" src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Avanzado</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">SQL Server</span>
+                    <img class="tecIcon" width="100px" src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Oracle</span>
+                    <img class="tecIcon" width="100px" src="https://www.inventateq.com/top-stories/wp-content/uploads/2024/05/oracle2.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Linux</span>
+                    <img class="tecIcon" width="100px" src="https://cdn.iconscout.com/icon/free/png-256/free-linux-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-4-pack-logos-icons-2944967.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Docker</span>
+                    <img class="tecIcon" width="100px" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Principiante</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Angular</span>
+                    <img class="tecIcon" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Ionic</span>
+                    <img class="tecIcon" width="100px" src="https://cdn.iconscout.com/icon/free/png-256/free-ionic-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-4-pack-logos-icons-2945013.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Spring</span>
+                    <img class="tecIcon" width="100px" src="https://dominickm.com/wp-content/uploads/2016/06/spring-boot-logo_full.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Principiante</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">NodeJS</span>
+                    <img class="tecIcon" width="100px" src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Avanzado</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">React</span>
+                    <img class="tecIcon" width="100px" src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Principiante</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Python</span>
+                    <img class="tecIcon" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">Git</span>
+                    <img class="tecIcon" width="100px" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="tec">GitHub</span>
+                    <img class="tecIcon" width="100px" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+                    <div class="levelContainer">
+                        <span class="level"><b>Nivel: </b>Intermedio</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="exp" class="exp">
+            <b>Experiencia</b>
+            <div id="cardsBlock" class="cardsBlock">
+                <!-- Llenado Dinámico de Javascript -->
+            </div>
+        </div>
+        <div id="contact" class="contact">
+            <b>
+                ¿Tienes un desarrollo en mente?<br>
+                <span style="color: white;">¡Hablemos de ello!</span>
+            </b>
+            <div class="mediums">
+                <div class="medium">
+                    <div>
+                        <ion-icon name="call" class="icon"></ion-icon>
+                        <b>Teléfono: &nbsp;&nbsp;</b>
+                    </div>
+                    <span>098 400 9282</span>
+                </div>
+                <div class="medium">
+                    <div>
+                        <ion-icon name="mail" class="icon"></ion-icon>
+                        <b>Correo:  &nbsp;&nbsp;</b>
+                    </div>
+                    <span>juanex1412@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <b>BÚSCAME COMO</b>
+            <div class="net">
+                <a href="https://www.linkedin.com/in/juan-esteban-esp%C3%ADn-morales-191b15344/" title="LinkedIn">
+                    <ion-icon name="logo-linkedin" target="_blank" class="icon"></ion-icon>
+                    <span>Juan Esteban Espín Morales</span>
+                </a>
+                <a href="https://github.com/PsychoticProgrammer" target="_blank" title="GitHub">
+                    <ion-icon name="logo-github" class="icon"></ion-icon>
+                    <span>/PsychoticProgrammer</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

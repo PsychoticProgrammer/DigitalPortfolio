@@ -1,0 +1,426 @@
+@keyframes appearScale{
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    --color-bg: #0e141b;
+    --color-bg-offset: #252526;
+    --color-text: #ffffff;
+    --color-text-offset: rgba(255, 255, 255, 0.85);
+    --color-border: #2d2d2d;
+    --color-primary: #ff5277;
+    --color-primary-offset: #ff2957;
+    --color-secondary: #43a9a3; 
+    --color-secondary-offset: #42ddd2; 
+    --color-murray: #861657;
+    --color-ghost: #F0EFF4;
+    --color-blue: #3066BE;
+    --color-text-ivory: #F9F9ED;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-blue);
+    box-shadow: 0px 5px 10px var(--color-blue);
+    color: var(--color-text);
+    font-size: 1.3rem;
+}
+
+:target {
+    scroll-margin-top: 120px;
+}
+
+.photoSection{
+    display: flex;
+    align-items: center;
+}
+
+.imageContainer{
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.sections ul{
+    list-style: none;
+    display: block;
+}
+
+.sections li{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    color: var(--color-text-offset);
+}
+
+.sections li::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-text-offset);
+    transition: width 0.3s ease-in-out;
+}
+
+.sections li:hover{
+    color: white;
+    transition: color 0.5s;
+}
+
+.sections li:hover::before{
+    width: 100%;
+}
+
+.sections .nav{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sections .nav:visited,
+.sections .nav:active{
+    color: inherit;
+}
+
+main{
+    margin: 160px 50px 50px 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.banner{
+    height: 600px;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.banner img{
+    position: absolute;
+    filter: brightness(50%);
+    width: 100%;
+}
+
+.bannerText{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.bannerText .hello{
+    display: block;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.bannerText .presentation{
+    display: block;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+.personalInfo{
+    margin-top: 100px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+    "text    img"
+    "studies img"
+    "certif  img";
+    color: white;
+    font-size: 1.5rem;
+    transform-style: preserve-3d;
+}
+
+.personalInfo b{
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.personalInfo .text{
+    grid-area: text;
+    animation: appearScale linear;
+}
+
+.personalInfo .text span{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.personalInfo .text .name{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.personalInfo .studies{
+    grid-area: studies;
+}
+
+.personalInfo .certifications{
+    grid-area: certif;
+    margin-top: 20px;
+}
+
+.personalInfo .img{
+    grid-area: img;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-blue);
+}
+
+.knowledge{
+    margin-top: 100px;
+    padding: 50px 20px;
+    border-radius: 20px;
+    background-color: var(--color-ghost);
+    font-weight: bold;
+}
+
+.knowledge > b{
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.knowledge ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 50px;
+    margin: auto;
+    justify-items: center;
+}
+
+.knowledge li{
+    width: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.knowledge li .tec{
+    font-size: 1.5rem;
+}
+
+.knowledge img{
+    margin-top: 10px;
+}
+
+.knowledge li .levelContainer{
+    position: absolute;
+    top: 90px;
+    width: 100px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-style: italic;
+    opacity: 0;
+    transition: top 0.2s ease-in, opacity 0.3s ease-in;
+}
+
+.knowledge li:hover .levelContainer{
+    opacity: 1;
+    top: 30px
+}
+
+.exp{
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.exp > b{
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+
+.exp .cardsBlock{
+    margin-top: 50px;
+}
+
+.cardsBlock .project{
+    margin-top: 50px;
+    display: flex;
+    color: var(--color-text-ivory);
+}
+
+.project b{
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    transition-duration: 0.3s;
+    transition-property: color;
+    cursor: pointer;
+}
+
+.project b:before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project b:hover{
+    color: var(--color-secondary-offset);
+}
+
+.project b:hover::before{
+    transform: scale(1);
+    background-color: var(--color-secondary-offset);
+}
+
+.project a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.project a:visited,
+.project a:active{
+    color: inherit;
+}
+
+.project .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.info p{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.description b{
+    font-size: inherit;
+    color: var(--color-primary);
+}
+
+.description b:hover{
+    color: var(--color-primary-offset);
+    cursor: pointer;
+}
+
+.description a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.description a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary-offset);
+}
+
+.description a:visited,
+.description a:active{
+    color: inherit;
+}
+
+.contact{
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.contact > b{
+    font-size: 2rem;
+    color:  var(--color-primary);
+}
+
+.contact .mediums{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mediums .medium{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    color: var(--color-secondary);
+}
+
+.medium .icon{
+    margin-right: 10px;
+}
+
+.medium span{
+    color: white;
+}
+
+.social{
+    margin-top: 100px;
+    padding: 20px;
+    background-color: var(--color-blue);
+    color: var(--color-text-ivory);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.social a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+.social a:hover, 
+.social a:visited, 
+.social a:active {
+    color: inherit;
+}
+
+.social .net{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.social .net .icon{
+    font-size: 4rem;
+}
+
+
